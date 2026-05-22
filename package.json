@@ -1,0 +1,29 @@
+{
+  "name": "expense-tracker",
+  "module": "index.ts",
+  "type": "module",
+  "private": true,
+
+  "workspaces": ["frontend"],
+
+  "scripts": {
+    "start": "bun server/index.ts",
+    "dev": "bun --watch server/index.ts",
+    "dev:frontend": "cd frontend && bun dev"
+  },
+
+  "devDependencies": {
+    "@flydotio/dockerfile": "^0.7.10",
+    "@types/bun": "latest"
+  },
+
+  "peerDependencies": {
+    "typescript": "^5"
+  },
+
+  "dependencies": {
+    "@hono/zod-validator": "^0.8.0",
+    "hono": "^4.12.21",
+    "zod": "^4.4.3"
+  }
+}

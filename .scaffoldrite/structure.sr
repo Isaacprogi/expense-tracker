@@ -1,0 +1,58 @@
+folder frontend {
+  folder .scaffoldrite {
+    file .scaffoldignore
+    file project.json
+    file structure.sr
+  }
+  folder public {
+    file favicon.svg
+    file icons.svg
+  }
+  folder src {
+    folder assets {
+      file hero.png
+      file react.svg
+      file vite.svg
+    }
+    folder components {
+      folder ui {
+        file button.tsx
+        file card.tsx
+      }
+    }
+    folder lib {
+      file utils.ts
+    }
+    file App.css
+    file App.tsx
+    file index.css
+    file main.tsx
+  }
+  file .gitignore
+  file bun.lock
+  file components.json
+  file eslint.config.js
+  file index.html
+  file package.json
+  file README.md
+  file tsconfig.app.json
+  file tsconfig.json
+  file tsconfig.node.json
+  file vite.config.ts
+}
+folder server {
+  folder routes {
+    file expenses.ts
+  }
+  file app.ts
+  file index.ts
+}
+file .dockerignore
+file .gitignore
+file bun.lock
+file Dockerfile
+file fly.toml
+file package-lock.json
+file package.json
+file README.md
+file tsconfig.json
