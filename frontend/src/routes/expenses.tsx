@@ -9,6 +9,8 @@ import {
   TableRow,
 } from "@/components/ui/table"
 
+import { Skeleton } from "@/components/ui/skeleton"
+
 import { createFileRoute } from "@tanstack/react-router"
 import { api } from "@/lib/api"
 import { useQuery } from "@tanstack/react-query"
@@ -65,11 +67,19 @@ export function TableDemo({
 
       <TableBody>
         {isPending ? (
-          <TableRow>
-            <TableCell colSpan={3} className="text-center">
-              Loading...
-            </TableCell>
-          </TableRow>
+          Array(5).fill(0).map((_, i) => (
+            <TableRow key={i}>
+              <TableCell>
+                <Skeleton className="h-4 w-12" />
+              </TableCell>
+              <TableCell>
+                <Skeleton className="h-4 w-32" />
+              </TableCell>
+              <TableCell>
+                <Skeleton className="h-4 w-16" />
+              </TableCell>
+            </TableRow>
+          ))
         ) : data?.expenses?.length ? (
           data.expenses.map((expense: any) => (
             <TableRow key={expense.id}>
